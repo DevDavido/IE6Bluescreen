@@ -36,7 +36,7 @@ curl \
 Screenshot
 ----------
 
-+[![Screenshot](http://img585.imageshack.us/img585/836/screenshotie6bluescreen.png)](http://img585.imageshack.us/img585/836/screenshotie6bluescreen.png)
+[![Screenshot](http://img585.imageshack.us/img585/836/screenshotie6bluescreen.png)](http://img585.imageshack.us/img585/836/screenshotie6bluescreen.png)
 
 
 License

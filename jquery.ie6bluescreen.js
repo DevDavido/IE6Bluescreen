@@ -57,7 +57,7 @@
             // Setup the html
             $('body').append('<div id="bluescreenWrapper"> \
                                   <div id="bluescreen"> \
-                                      <h1>Windows</h1><br /> \
+                                      <h1>Windows</h1> \
                                       <p>A totally outdated browser software (Internet Explorer 6) was detected.</p> \
                                       <p>This browser is older than a whole decade and even its creator, Microsoft,</p> \
                                       <p>says to move off IE6 and say goodbye to this dinosaur.</p> \
