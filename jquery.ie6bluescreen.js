@@ -55,7 +55,7 @@
             }
             
             // Set cookie name
-            var cookieName = ie6bluescreen + '=';
+            var cookieName = 'ie6bluescreen=';
             // Split cookies
             var cookies = document.cookie.split(';');
             // Get cookie value
