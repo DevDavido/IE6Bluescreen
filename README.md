@@ -3,7 +3,7 @@ IE6Bluescreen
 
 IE6Bluescreen is a little (fun) jQuery project which show's a **bluescreen** for IE6 browsers instead the normal website.
 
-How to include it?
+How to include it
 ----------
 
 ```
@@ -18,6 +18,7 @@ In your HTML:
 ```
 
 Replace `path/to/your/js` with the path to your JavaScript directory, e.g. `public/javascripts`.
+The plugin will start automatically if `jquery.ie6bluescreen.js` is included.
 
 
 Minimize it
