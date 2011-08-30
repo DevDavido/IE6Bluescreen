@@ -54,25 +54,29 @@
                 }
             }
             
-            // Set cookie name
-            var cookieName = 'ie6bluescreen=';
-            // Split cookies
-            var cookies = document.cookie.split(';');
-            // Get cookie value
-            for (var i = 0; i < cookies.length; i++) {
-                var c = cookies[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1, c.length)
-                };
-                if (c.indexOf(cookieName) == 0) {
-                    var cookieValue = c.substring(cookieName.length, c.length);
-                } else {
-                    var cookieValue = '';
+            function createCookie(name, value) {
+                var date = new Date();
+                date.setTime(date.getTime() + 86400000);
+                document.cookie = name + '=' + value + '; expires=' + date.toGMTString() + '; path=/';
+            }
+            
+            function readCookie(name) {
+                var name = name + '=';
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var c = cookies[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1, c.length);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
                 }
+                return null;
             }
             
             // If cookie isn't set show bluescreen
-            if (cookieValue != '1') {
+            if (readCookie('ie6bluescreen') != '1') {
                 // Setup the html
                 $('body').append('<div id="bluescreenWrapper"> \
                                       <div id="bluescreen"> \
@@ -108,7 +112,7 @@
                 $(document).bind('keypress', function() {
                     $('#bluescreenWrapper').fadeOut('slow', function() {
                         // Calculate the expire date for the cookie and set cookie
-                        document.cookie = 'ie6bluescreen=1;expires=' + new Date(new Date().getTime() + 3600000 * 24).toGMTString() + ';path=/;';
+                        createCookie('ie6bluescreen', '1');
                         // Remove bluescreen wrapper
                         $('#bluescreenWrapper').remove();
                     });
