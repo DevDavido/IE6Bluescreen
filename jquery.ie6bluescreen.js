@@ -1,3 +1,12 @@
+/*!
+ * jQuery IE6Bluescreen v0.1
+ * https://github.com/DevDavido/IE6Bluescreen
+ *
+ * Copyright 2011, DevDavido
+ * Licensed under the MIT license
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
 (function($) {
     $.ie6bluescreen = function() {
         // Check if the browser is IE6
@@ -54,12 +63,18 @@
                 }
             }
             
+            /*!
+             * Creates a cookie with the value parameter for one day
+             */
             function createCookie(name, value) {
                 var date = new Date();
                 date.setTime(date.getTime() + 86400000);
                 document.cookie = name + '=' + value + '; expires=' + date.toGMTString() + '; path=/';
             }
             
+            /*!
+             * Reads a cookie with the parameter name
+             */
             function readCookie(name) {
                 var name = name + '=';
                 var cookies = document.cookie.split(';');
@@ -74,6 +89,7 @@
                 }
                 return null;
             }
+            
             
             // If cookie isn't set show bluescreen
             if (readCookie('ie6bluescreen') != '1') {
