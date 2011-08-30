@@ -32,6 +32,13 @@ curl \
   http://closure-compiler.appspot.com/compile
 ```
 
+
+Screenshot
+----------
+
++[![Screenshot](http://img585.imageshack.us/img585/836/screenshotie6bluescreen.png)](http://img585.imageshack.us/img585/836/screenshotie6bluescreen.png)
+
+
 License
 -------
 Released under the MIT License.
