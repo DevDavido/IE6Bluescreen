@@ -107,10 +107,8 @@
                 // If any key is pressed fade out and remove the bluescreen
                 $(document).bind('keypress', function() {
                     $('#bluescreenWrapper').fadeOut('slow', function() {
-                        // Calculate the expire date for the cookie
-                        var expire = new Date().getTime() + 3600000 * 24;
-                        // Set cookie
-                        document.cookie = 'ie6bluescreen=1;expires=' + expire.toGMTString() + ';path=/';
+                        // Calculate the expire date for the cookie and set cookie
+                        document.cookie = 'ie6bluescreen=1;expires=' + new Date(new Date().getTime() + 3600000 * 24).toGMTString() + ';path=/;';
                         // Remove bluescreen wrapper
                         $('#bluescreenWrapper').remove();
                     });
